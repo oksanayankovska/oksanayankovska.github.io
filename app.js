@@ -94,25 +94,24 @@ function closeServiceModal() {
   document.body.style.overflow = "";
 }
 
+document.addEventListener("click", (e) => {
+  const link = e.target.closest('a[href="#photo-guide"]');
+
+  if (!link) return;
+
+  closeServiceModal();
+
+  setTimeout(() => {
+    document
+      .querySelector("#photo-guide")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+});
 if (serviceModalClose)
   serviceModalClose.addEventListener("click", closeServiceModal);
 if (serviceModalOverlay)
   serviceModalOverlay.addEventListener("click", closeServiceModal);
 
-const discoverBtn = document.querySelector(".discover-toggle");
-const discoverHidden = document.querySelector(".discover-hidden");
-
-if (discoverBtn && discoverHidden) {
-  discoverBtn.addEventListener("click", () => {
-    discoverHidden.classList.toggle("is-open");
-
-    if (discoverHidden.classList.contains("is-open")) {
-      discoverBtn.textContent = "Сховати";
-    } else {
-      discoverBtn.textContent = "Показати ще 5 аспектів";
-    }
-  });
-}
 const businessSlider = document.querySelector(".business-slider");
 const businessPrev = document.querySelector(".business-prev");
 const businessNext = document.querySelector(".business-next");
@@ -163,7 +162,7 @@ const reviewsNext = document.querySelector(".reviews-next");
 
 if (reviewsSlider && reviewsPrev && reviewsNext) {
   const reviewScrollAmount = () =>
-    reviewsSlider.querySelector(".review-img").offsetWidth + 20;
+    reviewsSlider.querySelector(".review-phone").offsetWidth + 28;
 
   reviewsNext.addEventListener("click", () => {
     reviewsSlider.scrollBy({
@@ -211,3 +210,47 @@ if (faqToggle && faqHidden) {
       : "Показати всі питання";
   });
 }
+
+const aboutBtn = document.querySelector(".story-more");
+const unofficialBtn = document.querySelector(".story-unofficial");
+
+const aboutModal = document.getElementById("aboutModal");
+const unofficialModal = document.getElementById("unofficialModal");
+
+function openModal(modal) {
+  modal.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(modal) {
+  modal.classList.remove("is-open");
+  document.body.style.overflow = "";
+}
+
+aboutBtn?.addEventListener("click", () => {
+  openModal(aboutModal);
+});
+
+unofficialBtn?.addEventListener("click", () => {
+  openModal(unofficialModal);
+});
+
+document.querySelectorAll(".service-modal").forEach((modal) => {
+  modal
+    .querySelector(".service-modal__close")
+    ?.addEventListener("click", () => closeModal(modal));
+
+  modal
+    .querySelector(".service-modal__overlay")
+    ?.addEventListener("click", () => closeModal(modal));
+});
+
+document.querySelectorAll(".review-short").forEach((item) => {
+  const maxLength = 450;
+
+  const fullText = item.textContent.trim();
+
+  if (fullText.length > maxLength) {
+    item.textContent = fullText.slice(0, maxLength) + "...";
+  }
+});
