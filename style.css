@@ -1200,7 +1200,7 @@ img {
 
 .service-card span {
   display: block;
-
+  margin-top: 20px;
   margin-bottom: 20px;
 
   font-family: var(--font-title);
@@ -1215,7 +1215,7 @@ img {
   margin-top: 0;
   margin-bottom: 20px;
   font-family: var(--font-title);
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.1;
   color: #1f2928;
@@ -1300,6 +1300,10 @@ img {
   color: #1f2928;
 }
 
+.service-modal__body li strong {
+  text-decoration: underline;
+}
+
 .service-modal__body p {
   color: var(--muted);
 }
@@ -1337,7 +1341,7 @@ img {
 .service-card {
   flex: 18%;
   scroll-snap-align: start;
-  padding: 30px;
+  padding: 20px;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.38);
   backdrop-filter: blur(20px);
@@ -2049,26 +2053,19 @@ img {
 .service-badge {
   display: inline-flex;
   align-items: center;
-
   width: fit-content;
-
   margin-bottom: 20px;
-  padding: 8px 16px;
-
+  padding: 4px 5px;
   border-radius: 999px;
-
   background: rgba(67, 147, 156, 0.12);
-
   border: 1px solid rgba(67, 147, 156, 0.18);
-
   color: var(--deep-ocean);
-
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: 10px;
 }
 
@@ -2675,16 +2672,23 @@ img {
 
 /* Desktop */
 .services-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
+}
+
+.services-grid .service-more {
+  min-width: auto;
+  padding: 10px 10px;
+  min-height: auto;
 }
 
 .services-slider {
   display: none;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1040px) {
   .services-grid {
     flex-wrap: wrap;
   }
@@ -2821,6 +2825,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 30px;
+  align-items: center;
 }
 
 .contact-price__links {
@@ -2948,7 +2953,6 @@ img {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 10px 30px 24px;
-  justify-content: center;
 }
 
 .reviews-slider::-webkit-scrollbar {
@@ -3059,6 +3063,26 @@ img {
 }
 
 @media (max-width: 768px) {
+  .contact-price__info .title,
+  .contact-price__info .study__text {
+    text-align: center;
+  }
+  .reviews-slider {
+    justify-content: flex-start;
+  }
+  .hero__content {
+    text-align: center;
+  }
+  .hero__actions,
+  .story__actions {
+    justify-content: center;
+  }
+  .story-card {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1048px) {
   .services-grid {
     display: none;
   }
@@ -3089,24 +3113,6 @@ img {
   .services__head {
     margin-bottom: 30px;
   }
-
-  .contact-price__info .title,
-  .contact-price__info .study__text {
-    text-align: center;
-  }
-  .reviews-slider {
-    justify-content: flex-start;
-  }
-  .hero__content {
-    text-align: center;
-  }
-  .hero__actions,
-  .story__actions {
-    justify-content: center;
-  }
-  .story-card {
-    text-align: center;
-  }
 }
 
 .back {
@@ -3122,4 +3128,16 @@ img {
       transparent 45%
     ),
     linear-gradient(180deg, #f1e6d4 0%, #e8d8c0 100%);
+}
+
+.contact-price__bottom {
+  margin-top: 20px;
+}
+
+.contact-price__bottom p {
+  margin-bottom: 15px;
+}
+
+.contact-price__bottom .btn {
+  width: 100%;
 }
