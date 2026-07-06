@@ -254,3 +254,57 @@ document.querySelectorAll(".review-short").forEach((item) => {
     item.textContent = fullText.slice(0, maxLength) + "...";
   }
 });
+
+// ======== Налаштування ========
+const BOT_TOKEN = "8947716853:AAHdoCoGOe4IVz4PlaEsIzjSLCoZDc77KRI";
+const CHAT_ID = "ВСТАВ_СЮДИ_CHAT_ID";
+
+// ==============================
+
+const form = document.getElementById("priceForm");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  const text = `
+📩 <b>Нова заявка на прайс</b>
+
+👤 <b>Ім'я:</b> ${name}
+📞 <b>Телефон:</b> ${phone}
+📧 <b>Email:</b> ${email}
+`;
+
+  try {
+    const response = await fetch(
+      `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: text,
+          parse_mode: "HTML",
+        }),
+      },
+    );
+
+    if (!response.ok) throw new Error("Помилка відправки");
+
+    message.textContent = "✅ Заявку успішно відправлено!";
+    message.style.color = "green";
+
+    form.reset();
+  } catch (error) {
+    console.error(error);
+
+    message.textContent = "❌ Помилка відправки. Спробуйте ще раз.";
+    message.style.color = "red";
+  }
+});

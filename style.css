@@ -2987,7 +2987,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 22px;
+  gap: 7px;
   text-align: center;
 }
 
@@ -2996,18 +2996,26 @@ img {
   min-height: 170px;
   overflow: hidden;
   font-size: 14px;
-  line-height: 1.65;
+  line-height: 1.63;
   font-style: italic;
+  margin-bottom: 14px;
+}
+
+.review-phone__text p span {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 10px;
 }
 
 .review-more {
   min-width: 0;
-  width: auto;
+  width: 100%;
   max-width: 220px;
-  min-height: 42px;
+  min-height: 32px;
   padding: 0 18px;
   font-size: 11px;
   letter-spacing: 0.08em;
+  margin-top: 0;
 }
 
 .reviews__nav {
@@ -3033,14 +3041,10 @@ img {
     width: 280px;
   }
 
-  .review-phone__text p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
   .review-more {
     font-size: 10px;
     padding: 0 14px;
+    width: 100%;
   }
   .contact-price__form h3 {
     font-size: 25px;
@@ -3140,4 +3144,25 @@ img {
 
 .contact-price__bottom .btn {
   width: 100%;
+}
+
+.review-language {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 0;
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(47, 94, 91, 0.12);
+
+  color: var(--deep-ocean);
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
