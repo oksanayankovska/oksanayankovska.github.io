@@ -257,7 +257,7 @@ document.querySelectorAll(".review-short").forEach((item) => {
 
 // ======== Налаштування ========
 const BOT_TOKEN = "8947716853:AAHdoCoGOe4IVz4PlaEsIzjSLCoZDc77KRI";
-const CHAT_ID = "ВСТАВ_СЮДИ_CHAT_ID";
+const CHAT_ID = "325988031";
 
 // ==============================
 
