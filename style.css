@@ -2265,6 +2265,7 @@ img {
 
 .photo-guide {
   padding: 60px 0;
+  position: relative;
 }
 
 .photo-guide__card {
