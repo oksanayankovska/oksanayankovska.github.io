@@ -212,25 +212,40 @@ img {
 }
 
 .btn {
+  appearance: none;
+  -webkit-appearance: none;
+
   min-height: 46px;
   padding: 0 28px;
+  border: 1px solid transparent;
   border-radius: 999px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--deep-ocean);
-  color: #fff;
-  border: 1px solid transparent;
-  font-size: 14px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transition: var(--transition);
-  box-shadow: 0 12px 32px rgba(47, 94, 91, 0.18);
-  z-index: 100;
+
   width: max-content;
   min-width: 200px;
   max-width: 400px;
+
+  background: var(--deep-ocean);
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: inherit;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  text-align: center;
+
+  box-sizing: border-box;
   cursor: pointer;
+
+  transition: var(--transition);
+  box-shadow: 0 12px 32px rgba(47, 94, 91, 0.18);
 }
 
 .btn:hover {
@@ -881,7 +896,7 @@ img {
   }
 
   .method-work__head {
-    margin-bottom: 34px;
+    margin-bottom: 10px;
   }
 
   .method-visual {
@@ -1375,23 +1390,31 @@ img {
 }
 
 .service-more {
-  margin-top: auto;
+  appearance: none;
+  -webkit-appearance: none;
   min-height: 46px;
   padding: 0 28px;
+  border: 1px solid transparent;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: max-content;
+  min-width: 200px;
+  max-width: 400px;
   background: var(--deep-ocean);
   color: #fff;
-  border: 1px solid transparent;
-  font-size: 13px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: inherit;
+  line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
   cursor: pointer;
   transition: var(--transition);
-  min-width: 200px;
-  width: max-content;
   box-shadow: 0 12px 32px rgba(47, 94, 91, 0.18);
 }
 
@@ -3091,7 +3114,9 @@ img {
   .services-grid {
     display: none;
   }
-
+  .method-work .title {
+    margin-bottom: 10px;
+  }
   .services-slider {
     display: flex;
     gap: 20px;
