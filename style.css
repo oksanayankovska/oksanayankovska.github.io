@@ -2847,8 +2847,8 @@ img {
 
 .contact-price__box {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 76px);
   align-items: center;
 }
 
@@ -2871,6 +2871,31 @@ img {
   border: 1px solid rgba(47, 94, 91, 0.16);
   transition: var(--transition);
   min-width: 200px;
+}
+
+.contact-photo .photo-frame {
+  aspect-ratio: 4 / 5;
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+.contact-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-price__content .study__text {
+  text-align: left;
+}
+
+.contact-price .title {
+  text-align: center;
+  margin: auto;
+}
+
+.contact-price__details {
+  margin-bottom: 30px;
 }
 
 .contact-price__links a:hover {
@@ -2947,9 +2972,10 @@ img {
   .reviews__head {
     margin-bottom: 30px;
   }
-  .study__text {
-    margin-top: 20px;
+  .contact-price__content .study__text {
     margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0;
   }
   .study__head {
     margin-bottom: 10px;
@@ -2959,6 +2985,12 @@ img {
   }
   .contact-price {
     padding: 0 0 30px;
+  }
+  .contact-price__form-heading {
+    text-align: center;
+  }
+  .contact-photo {
+    margin-top: 20px;
   }
 }
 .reviews {
@@ -3161,7 +3193,8 @@ img {
 }
 
 .contact-price__bottom {
-  margin-top: 20px;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .contact-price__bottom p {

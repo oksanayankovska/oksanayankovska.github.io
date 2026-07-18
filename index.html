@@ -1135,7 +1135,7 @@
         <p>
           Консультація поєднує аналіз рис обличчя з техніками квантової
           фізіогноміки. У цій роботі я працюю не з обличчям напряму, а з
-          внутрішньою реальністю людини, яка в ньому відображається.
+          внутрішньою реальністю людини, яка на ньому відображається.
         </p>
 
         <p>
@@ -2039,94 +2039,142 @@
 
         <section class="contact-price" id="contact">
           <div class="container">
+            <div class="reviews__head">
+              <p class="eyebrow">Контакти</p>
+              <h2 class="title">Замовити консультацію або отримати прайс</h2>
+            </div>
+          </div>
+          <div class="container">
             <div class="contact-price__box">
-              <div class="contact-price__info">
-                <p class="eyebrow">КОНТАКТИ</p>
-
-                <h2 class="title">Замовити консультацію або отримати прайс</h2>
-
-                <p class="study__text">
-                  Напишіть мені напряму або залиште контакти — я надішлю
-                  актуальний прайс та допоможу обрати відповідний формат
-                  послуги.
-                </p>
-
-                <div class="contact-price__links">
-                  <a href="https://wa.me/380674334108" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    WhatsApp
-                  </a>
-
-                  <a href="https://t.me/psyfacereading" target="_blank">
-                    <i class="fa-brands fa-telegram"></i>
-                    Telegram
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/facereading.oksana/"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-instagram"></i>
-                    @facereading.oksana
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/oksana_veda/"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-instagram"></i>
-                    @oksana_veda
-                  </a>
-
-                  <a href="mailto:okisana@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-                    Email
-                  </a>
+              <!-- Ліва колонка -->
+              <div class="contact-price__intro">
+                <div class="contact-photo">
+                  <div class="photo-frame">
+                    <img
+                      src="img/contacts.jpg"
+                      alt="Оксана Янковська"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-
                 <div class="contact-price__bottom">
-                  <p>Зв'яжіться зі мною для індивідуальної консультації</p>
+                  <p>Зв’яжіться зі мною для індивідуальної консультації</p>
 
                   <a
                     href="https://wa.me/380674334108"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="btn"
                   >
                     Замовити консультацію
                   </a>
                 </div>
               </div>
-              <form id="priceForm" class="contact-price__form">
-                <h3>Отримати прайс</h3>
 
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Ваше ім'я"
-                  required
-                />
+              <div class="contact-price__content">
+                <div class="contact-price__details">
+                  <p class="study__text">
+                    Напишіть мені напряму або залиште свої контакти — я надішлю
+                    актуальний прайс та допоможу обрати відповідний формат
+                    послуги.
+                  </p>
 
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Номер телефону"
-                  required
-                />
+                  <div class="contact-price__links">
+                    <a
+                      href="https://wa.me/380674334108"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                      <span>WhatsApp</span>
+                    </a>
 
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
+                    <a
+                      href="https://t.me/psyfacereading"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                      <span>Telegram</span>
+                    </a>
 
-                <button type="submit" class="btn">Замовити прайс</button>
+                    <a
+                      href="https://www.instagram.com/facereading.oksana/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                      <span>@facereading.oksana</span>
+                    </a>
 
-                <p id="formMessage"></p>
-              </form>
+                    <a
+                      href="https://www.instagram.com/oksana_veda/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                      <span>@oksana_veda</span>
+                    </a>
+
+                    <a href="mailto:okisana@gmail.com">
+                      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                      <span>okisana@gmail.com</span>
+                    </a>
+                  </div>
+                </div>
+
+                <form id="priceForm" class="contact-price__form">
+                  <div class="contact-price__form-heading">
+                    <p class="eyebrow">Залишити заявку</p>
+                    <h3>Отримати прайс</h3>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="name">Ваше ім’я</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Введіть ім’я"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="phone">Номер телефону</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="+380"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="example@gmail.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <button type="submit" class="btn">Замовити прайс</button>
+
+                  <p
+                    id="formMessage"
+                    class="form-message"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
             </div>
           </div>
         </section>
