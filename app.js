@@ -205,9 +205,15 @@ if (faqToggle && faqHidden) {
   faqToggle.addEventListener("click", () => {
     faqHidden.classList.toggle("is-open");
 
+    const isGerman = document.documentElement.lang === "de";
+
     faqToggle.textContent = faqHidden.classList.contains("is-open")
-      ? "Сховати питання"
-      : "Показати всі питання";
+      ? isGerman
+        ? "WENIGER ANZEIGEN"
+        : "Сховати питання"
+      : isGerman
+        ? "MEHR ANZEIGEN"
+        : "Показати всі питання";
   });
 }
 

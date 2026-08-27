@@ -430,7 +430,7 @@ img {
 
   .hero__media {
     order: -1;
-    max-width: 560px;
+    max-width: 590px;
     margin-inline: auto;
   }
 
@@ -2297,12 +2297,6 @@ img {
   gap: 30px;
 }
 
-.photo-guide__card > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .photo-guide__text {
   max-width: 620px;
   margin: 24px 0 30px;
@@ -2319,6 +2313,7 @@ img {
 .photo-guide__actions .service-more {
   width: auto;
   margin-top: 0;
+  margin: auto;
 }
 
 .photo-guide__visual {
@@ -3167,6 +3162,7 @@ img {
     min-width: 85%;
     scroll-snap-align: start;
     box-shadow: none;
+    justify-content: space-between;
   }
 
   .services__nav {
@@ -3224,4 +3220,387 @@ img {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.language-switch a {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+  transition: 0.3s;
+  position: relative;
+}
+
+.language-switch a:hover {
+  color: var(--deep-ocean);
+}
+
+.language-switch a.active {
+  color: var(--deep-ocean);
+  font-weight: 600;
+}
+
+.language-switch span {
+  width: 1px;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.language-switch a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  transition: 0.3s;
+}
+
+.language-switch a.active {
+  background: var(--deep-ocean);
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .language-switch {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(240 229 212);
+  }
+}
+
+/* =========================
+   SERVICES PHOTO
+========================= */
+
+.services-photo {
+  position: relative;
+  width: 100%;
+  height: clamp(840px, 42vw, 520px);
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  border-radius: 70px 22px 70px 22px;
+
+  background: var(--sand);
+
+  box-shadow: 0 24px 70px rgba(47, 94, 91, 0.12);
+}
+
+.services-photo::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  z-index: 2;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 58px 14px 58px 14px;
+
+  pointer-events: none;
+}
+
+.services-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(20, 60, 60, 0) 55%,
+    rgba(20, 60, 60, 0.08) 100%
+  );
+
+  pointer-events: none;
+}
+
+.services-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s ease;
+}
+
+.services-photo:hover img {
+  transform: scale(1.025);
+}
+
+@media (max-width: 768px) {
+  .services-photo {
+    height: 420px;
+    margin-bottom: 20px;
+
+    border-radius: 42px 16px 52px 16px;
+  }
+
+  .services-photo::before {
+    inset: 10px;
+    border-radius: 34px 10px 44px 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .services-photo {
+    height: 500px;
+
+    border-radius: 34px 14px 44px 14px;
+  }
+
+  .services-photo img {
+    object-position: center top;
+  }
+}
+/* =========================
+   PHOTO GUIDE COLLAGE
+========================= */
+
+.photo-guide__card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(35px, 5vw, 70px);
+  align-items: center;
+}
+
+.photo-guide__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* COLLAGE */
+
+.photo-guide__collage {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 12px;
+
+  padding: 12px;
+
+  border-radius: 70px 22px 70px 22px;
+
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 24px 70px rgba(47, 94, 91, 0.12);
+
+  overflow: hidden;
+}
+
+/* PHOTO */
+
+.photo-guide__photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--sand);
+}
+
+/* різні кути — щоб не було просто 4 квадрати */
+
+.photo-guide__photo:nth-child(1) {
+  border-radius: 55px 10px 10px 10px;
+}
+
+.photo-guide__photo:nth-child(2) {
+  border-radius: 10px 18px 10px 10px;
+}
+
+.photo-guide__photo:nth-child(3) {
+  border-radius: 10px 10px 10px 18px;
+}
+
+.photo-guide__photo:nth-child(4) {
+  border-radius: 10px 10px 55px 10px;
+}
+
+.photo-guide__photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.photo-guide__photo:hover img {
+  transform: scale(1.04);
+}
+
+/* тонка внутрішня рамка */
+
+.photo-guide__photo::after {
+  content: "";
+
+  position: absolute;
+  inset: 7px;
+
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: inherit;
+
+  pointer-events: none;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .photo-guide .container {
+    padding: 0;
+  }
+  .photo-guide__card {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .photo-guide__collage {
+    grid-template-rows: 300px 300px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .photo-guide__card {
+    gap: 25px;
+  }
+
+  .photo-guide__collage {
+    grid-template-rows: 190px 190px;
+
+    gap: 7px;
+    padding: 7px;
+
+    border-radius: 38px 14px 46px 14px;
+  }
+
+  .photo-guide__photo:nth-child(1) {
+    border-radius: 30px 7px 7px 7px;
+  }
+
+  .photo-guide__photo:nth-child(2) {
+    border-radius: 7px 10px 7px 7px;
+  }
+
+  .photo-guide__photo:nth-child(3) {
+    border-radius: 7px;
+  }
+
+  .photo-guide__photo:nth-child(4) {
+    border-radius: 7px 7px 34px 7px;
+  }
+
+  .photo-guide__photo::after {
+    inset: 4px;
+  }
+}
+.photo-guide__collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 220px);
+  gap: 10px;
+
+  margin-top: 30px;
+  padding: 10px;
+
+  border-radius: 42px;
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 20px 60px rgba(47, 94, 91, 0.08);
+
+  overflow: hidden;
+}
+
+.photo-guide__photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.photo-guide__photo:nth-child(1) {
+  border-radius: 30px 8px 8px 8px;
+}
+
+.photo-guide__photo:nth-child(2) {
+  border-radius: 8px 30px 8px 8px;
+}
+
+.photo-guide__photo:nth-child(3) {
+  border-radius: 8px 8px 8px 30px;
+}
+
+.photo-guide__photo:nth-child(4) {
+  border-radius: 8px 8px 30px 8px;
+}
+
+.photo-guide__photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.photo-guide__photo:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .photo-guide__collage {
+    grid-template-rows: repeat(2, 180px);
+    gap: 7px;
+    padding: 7px;
+    margin-top: 24px;
+    border-radius: 30px;
+  }
+
+  .photo-guide__photo:nth-child(1) {
+    border-radius: 22px 6px 6px 6px;
+  }
+
+  .photo-guide__photo:nth-child(2) {
+    border-radius: 6px 22px 6px 6px;
+  }
+
+  .photo-guide__photo:nth-child(3) {
+    border-radius: 6px 6px 6px 22px;
+  }
+
+  .photo-guide__photo:nth-child(4) {
+    border-radius: 6px 6px 22px 6px;
+  }
 }
