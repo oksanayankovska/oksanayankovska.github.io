@@ -3063,8 +3063,8 @@ img {
   width: 100%;
   max-width: 220px;
   min-height: 32px;
-  padding: 0 18px;
-  font-size: 11px;
+  padding: 0 5px;
+  font-size: 9px;
   letter-spacing: 0.08em;
   margin-top: 0;
 }
@@ -3093,8 +3093,8 @@ img {
   }
 
   .review-more {
-    font-size: 10px;
-    padding: 0 14px;
+    font-size: 8px;
+    padding: 0 5px;
     width: 100%;
   }
   .contact-price__form h3 {
@@ -3216,7 +3216,7 @@ img {
 
   color: var(--deep-ocean);
 
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
